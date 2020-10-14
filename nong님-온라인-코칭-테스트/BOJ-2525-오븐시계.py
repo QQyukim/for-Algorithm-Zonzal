@@ -1,23 +1,24 @@
 # 입력받은 값 공백 분리
 #  map에 int와 input().split()을 넣으면 split의 결과를 모두 int로 변환해줌
 
+# 68ms
 hour, minute = map(int, input().split())
 timerMin = int(input())
 
-hour += timerMin // 60
-minute += timerMin % 60
+minute += timerMin
 
-# 분 -> 시간 계산순서 중요
 if minute >= 60:
-    hour += 1
-    minute %= 60
+    hour += minute // 60
+    minute = minute % 60 
+
 if hour >= 24:
     hour -= 24
 
 print(hour, minute)
 
-
 """
+# 다른 사람 풀이 # 64ms
+
 H, M = map(int, input().split())
 timer = int(input()) 
 
