@@ -25,7 +25,7 @@ def solution(progresses, speeds):
             continue
 
         for i in range(len(queue)):
-            if v >= queue[i]:
+            if v >= queue[i]:   # 같을 때에도 배포 같이!
                 queue[i] = 0
                 count += 1
             else:
