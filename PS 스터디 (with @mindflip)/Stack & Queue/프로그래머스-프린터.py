@@ -7,9 +7,9 @@ from collections import deque
 
 def solution(priorities, location):
     index = [ i for i in range(len(priorities)) ]
-    order = []
     indexOrder = []
 
+    # queue = deque([priorities, index])
     queue = deque(priorities)
     iQueue = deque(index)
 
@@ -30,7 +30,6 @@ def solution(priorities, location):
             else:
                 flag += 1
                 if flag == len(queue):
-                    # order.append(v)
                     indexOrder.append(iv)
                     
     return indexOrder.index(location) + 1
