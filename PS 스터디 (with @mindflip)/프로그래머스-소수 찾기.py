@@ -39,6 +39,7 @@ def solution(numbers):
                 ansList.remove(number)
                 continue
             else:
+                # 제곱근까지 생각해도 됨!
                 for i in range(2, (number // 2) + 1):
                     if number % i == 0:
                         ansList.remove(number)
